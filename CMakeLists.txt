@@ -69,6 +69,8 @@ add_library(common # ar rcs libcommon.a
 	common/renderer.cpp
 	common/sprite.h
 	common/sprite.cpp
+	common/scene.h
+	common/scene.cpp
 )
 
 # Demo
