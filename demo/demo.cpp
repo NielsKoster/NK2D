@@ -7,6 +7,8 @@
 #include <common/renderer.h>
 #include <common/camera.h>
 #include <common/sprite.h>
+#include <common/scene.h>
+#include <common/scenemanager.h>
 
 int main( void )
 {

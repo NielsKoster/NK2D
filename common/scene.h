@@ -5,8 +5,9 @@
 
 #include <vector>
 #include "sprite.h"
+#include "entity.h"
 
-class Scene
+class Scene : Entity
 {
 public:
 	Scene();
