@@ -9,10 +9,15 @@
 #include <common/sprite.h>
 #include <common/scene.h>
 #include <common/scenemanager.h>
+#include <common/entity.h>
 
 int main( void )
 {
 	Renderer renderer(1280, 720);
+
+	SceneManager scenemanager;
+	Scene* defaultscene = new Scene();
+	scenemanager.loadedscene = defaultscene;
 
 	do {
 		// Update deltaTime

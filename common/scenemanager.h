@@ -9,6 +9,8 @@ class SceneManager
 public:
 	SceneManager();
 	~SceneManager();
+	void LoadScene(Scene scene);
+	Scene* loadedscene;
 
 private:
 	std::vector<Scene*> Scenes;
