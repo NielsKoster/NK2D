@@ -14,7 +14,7 @@ public:
 	~Scene();
 
 private:
-	std::vector<Entity*> sceneSprites;
+	std::vector<Entity*> sceneEntities;
 };
 
 #endif

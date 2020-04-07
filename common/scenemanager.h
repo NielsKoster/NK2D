@@ -10,7 +10,7 @@ public:
 	SceneManager();
 	~SceneManager();
 	void LoadScene(Scene scene);
-	Scene* loadedscene;
+	Scene* loadedscene = new Scene();
 
 private:
 	std::vector<Scene*> Scenes;

@@ -8,9 +8,11 @@ class Entity
 public:
 	Entity();
 	~Entity();
+	void AddSprite(Sprite* sprite);
+	void DeleteSprite();
 
 private:
-
+	Sprite* _sprite = nullptr;
 };
 
 
