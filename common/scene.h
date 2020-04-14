@@ -12,9 +12,11 @@ class Scene : Entity
 public:
 	Scene();
 	~Scene();
+	void AddEntity(Entity* entity);
+	std::vector<Entity*> sceneEntities;
 
 private:
-	std::vector<Entity*> sceneEntities;
+	
 };
 
 #endif

@@ -17,6 +17,9 @@ class Sprite
 
 		unsigned int width() { return _width; };
 		unsigned int height() { return _height; };
+		unsigned int scaleX() { return _scaleX; };
+		unsigned int scaleY() { return _scaleY; };
+		unsigned int rotation() { return _rotation; };
 
 	private:
 		GLuint loadTGA(const std::string& imagepath);
@@ -27,6 +30,9 @@ class Sprite
 
 		unsigned int _width;
 		unsigned int _height;
+		unsigned int _scaleX;
+		unsigned int _scaleY;
+		unsigned int _rotation;
 };
 
 #endif /* SPRITE_H */

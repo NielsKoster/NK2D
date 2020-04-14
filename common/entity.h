@@ -12,7 +12,7 @@ public:
 	void DeleteSprite();
 
 private:
-	Sprite* _sprite = nullptr;
+	Sprite* _sprite;
 };
 
 

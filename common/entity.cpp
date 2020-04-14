@@ -2,7 +2,7 @@
 
 Entity::Entity()
 {
-	
+	_sprite = nullptr;
 }
 
 Entity::~Entity()
@@ -13,7 +13,7 @@ Entity::~Entity()
 void Entity::AddSprite(Sprite* sprite)
 {
 	DeleteSprite();
-	Sprite* _sprite;
+	_sprite = sprite;
 }
 
 void Entity::DeleteSprite()

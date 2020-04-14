@@ -15,6 +15,10 @@ Sprite::Sprite(const std::string& imagepath)
 	_width = 0;
 	_height = 0;
 
+	//these will not be set correctly in loadTGA() [NEEDS MORE WORK]
+	_scaleX = 1;
+	_scaleY = 1;
+
 	// Load image as texture
 	_texture = loadTGA(imagepath);
 

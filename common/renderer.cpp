@@ -53,7 +53,7 @@ int Renderer::init()
 	glfwSetInputMode(_window, GLFW_STICKY_KEYS, GL_TRUE);
 
 	// Dark blue background
-	glClearColor(0.0f, 0.0f, 0.4f, 0.0f);
+	glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
 
 	// Enable depth test
 	//glEnable(GL_DEPTH_TEST);
@@ -144,6 +144,14 @@ void Renderer::renderSprite(Sprite* sprite, float px, float py, float sx, float 
 
 	glDisableVertexAttribArray(vertexPositionID);
 	glDisableVertexAttribArray(vertexUVID);
+}
+
+void Renderer::renderSprites(std::vector<Sprite*> spriteList)
+{
+	for (int i = 0; i < spriteList.size(); i++)
+	{
+		renderSprite(spriteList[i], spriteList[i]->width, spriteList[i]->height, spriteList[i]->scaleX, spriteList[i]->scaleY, spriteList[i]->rotation);
+	}
 }
 
 GLuint Renderer::loadShaders(const std::string& vertex_file_path, const std::string& fragment_file_path)

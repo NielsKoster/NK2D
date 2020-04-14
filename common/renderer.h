@@ -25,6 +25,8 @@ class Renderer
 
 		float updateDeltaTime();
 
+		void renderSprites(std::vector<Sprite*> spriteList);
+
 	private:
 		int init();
 

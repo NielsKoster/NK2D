@@ -8,8 +8,11 @@ SceneManager::~SceneManager()
 {
 }
 
-void SceneManager::LoadScene(Scene scene)
+void SceneManager::LoadScene(Scene* scene)
 {
-	//loadedscene = NULL;
-	//scene = loadedscene;
+	if (loadedscene != nullptr)
+	{
+		loadedscene = nullptr;
+	}
+	loadedscene = scene;
 }

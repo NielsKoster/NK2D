@@ -15,9 +15,11 @@ int main( void )
 {
 	Renderer renderer(1280, 720);
 
+	Entity* car = new Entity();
 	SceneManager scenemanager;
 	Scene* defaultscene = new Scene();
 	scenemanager.loadedscene = defaultscene;
+	defaultscene->AddEntity(car);
 
 	do {
 		// Update deltaTime
@@ -38,6 +40,7 @@ int main( void )
 		// Swap buffers
 		glfwSwapBuffers(renderer.window());
 		glfwPollEvents();
+		defaultscene->sceneEntities
 
 	} // Check if the ESC key was pressed or the window was closed
 	while( glfwGetKey(renderer.window(), GLFW_KEY_ESCAPE ) != GLFW_PRESS &&
