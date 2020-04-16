@@ -10,6 +10,8 @@
 #include <glm/gtx/euler_angles.hpp>
 
 #include <common/sprite.h>
+#include <vector>
+#include <common/entity.h>
 
 class Renderer
 {
@@ -25,7 +27,7 @@ class Renderer
 
 		float updateDeltaTime();
 
-		void renderSprites(std::vector<Sprite*> spriteList);
+		void renderSprites(std::vector<Entity*> entityList);
 
 	private:
 		int init();

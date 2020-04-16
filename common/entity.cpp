@@ -23,3 +23,8 @@ void Entity::DeleteSprite()
 		delete _sprite;
 	}
 }
+
+Sprite* Entity::getSprite()
+{
+	return _sprite;
+}

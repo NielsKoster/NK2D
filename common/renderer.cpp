@@ -146,11 +146,14 @@ void Renderer::renderSprite(Sprite* sprite, float px, float py, float sx, float 
 	glDisableVertexAttribArray(vertexUVID);
 }
 
-void Renderer::renderSprites(std::vector<Sprite*> spriteList)
+void Renderer::renderSprites(std::vector<Entity*> entitylist)
 {
-	for (int i = 0; i < spriteList.size(); i++)
+	for (int i = 0; i < entitylist.size(); i++)
 	{
-		renderSprite(spriteList[i], spriteList[i]->width, spriteList[i]->height, spriteList[i]->scaleX, spriteList[i]->scaleY, spriteList[i]->rotation);
+		if (entitylist[i] != nullptr)
+		{
+			renderSprite(entitylist[i]->getSprite(), entitylist[i]->getSprite()->width, entitylist[i]->getSprite()->height, entitylist[i]->getSprite()->scaleX, entitylist[i]->getSprite()->scaleY, entitylist[i]->getSprite()->rotation);
+		}
 	}
 }
 

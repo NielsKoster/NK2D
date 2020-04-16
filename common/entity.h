@@ -10,6 +10,7 @@ public:
 	~Entity();
 	void AddSprite(Sprite* sprite);
 	void DeleteSprite();
+	Sprite* getSprite();
 
 private:
 	Sprite* _sprite;
